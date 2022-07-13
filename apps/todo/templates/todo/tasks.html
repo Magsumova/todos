@@ -1,0 +1,18 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+<div>
+    {% for task in tasks %}
+    <div class="tasks">
+        <h1>Заголовок:{{ task.title }}</h1>
+        <h2>Описание:{{ task.description }}</h2>
+        <h2>Задание:{{ task.todo }}</h2>
+    </div>
+    {% endfor %}
+</div>
+<style>
+    .tasks {
+        display: flexbox;
+        border: solid 1px black;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'todo/base.html' %}
+
+{% block title %}
+Создание таска
+{% endblock %}
+
+{% block content %}
+<h1>Создание Задания</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Добавить задание</button>
+    <span>{{ error }}</span>
+</form>
+{% endblock %}
